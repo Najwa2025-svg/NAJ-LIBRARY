@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>NAJ Library</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Roboto&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      background: linear-gradient(to right, #ff5f6d, #ffc371);
+      color: #333;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      padding: 15px 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+      border-bottom: 3px solid #e74c3c;
+    }
+
+    .owner-info img {
+      height: 80px;
+      border-radius: 12px;
+      border: 3px solid #e74c3c;
+    }
+
+    .owner-info .name {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 1rem;
+      color: #e74c3c;
+      line-height: 1.2;
+    }
+
+    .main-content {
+      text-align: center;
+      max-width: 1200px;
+      margin: 30px auto;
+    }
+
+    .main-content .logo {
+      width: 150px;
+      margin-bottom: 10px;
+    }
+
+    .main-content h1 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 2.5rem;
+      color: #e74c3c;
+      letter-spacing: 2px;
+    }
+
+    nav {
+      width: 100%;
+      background-color: #e74c3c;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 16px;
+      padding: 14px 10px;
+      box-shadow: 0 6px 15px rgba(231, 76, 60, 0.45);
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 700;
+      font-family: 'Montserrat', sans-serif;
+      padding: 12px 22px;
+      border-radius: 8px;
+      transition: background-color 0.3s ease;
+    }
+
+    nav a:hover {
+      background-color: #c0392b;
+    }
+
+    .welcome-banner {
+      max-width: 1000px;
+      background-color: #fce9e7;
+      border-left: 8px solid #e74c3c;
+      border-radius: 10px;
+      padding: 20px 25px;
+      margin: 40px auto;
+      box-shadow: 0 8px 20px rgba(231, 76, 60, 0.15);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 15px;
+      text-align: center;
+    }
+
+    .welcome-banner i {
+      font-size: 2rem;
+      color: #e74c3c;
+    }
+
+    .welcome-banner .text {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.4rem;
+      color: #e74c3c;
+      font-weight: bold;
+    }
+
+    .cards-container {
+      max-width: 1000px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+      gap: 30px;
+      margin: 0 auto 60px auto;
+      padding: 0 20px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 16px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-8px) scale(1.03);
+      box-shadow: 0 15px 35px rgba(231, 76, 60, 0.5);
+    }
+
+    .card::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 8px;
+      height: 100%;
+      background-color: #e74c3c;
+      border-top-left-radius: 16px;
+      border-bottom-left-radius: 16px;
+      box-shadow: 0 0 10px #e74c3caa;
+    }
+
+    .card h2 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.8rem;
+      color: #e74c3c;
+      margin-bottom: 15px;
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .icon-circle {
+      background-color: #fce9e7;
+      color: #e74c3c;
+      border-radius: 50%;
+      width: 45px;
+      height: 45px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 1.8rem;
+    }
+
+    .card p,
+    .card ul {
+      font-size: 1rem;
+      color: #555;
+      line-height: 1.6;
+      margin: 0 0 20px 0;
+    }
+
+    .card ul {
+      padding-left: 22px;
+    }
+
+    .card ul li {
+      margin-bottom: 12px;
+    }
+
+    footer {
+      background-color: #e74c3c;
+      color: white;
+      text-align: center;
+      padding: 15px 0;
+      font-family: 'Roboto', sans-serif;
+      font-size: 14px;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 500px) {
+      .card {
+        padding: 25px 20px 30px 20px;
+      }
+
+      nav a {
+        padding: 10px 14px;
+        font-size: 0.95rem;
+      }
+
+      .main-content h1 {
+        font-size: 2.2rem;
+      }
+
+      .owner-info img {
+        height: 70px;
+      }
+
+      .card h2 {
+        font-size: 1.5rem;
+        gap: 12px;
+      }
+
+      .icon-circle {
+        width: 38px;
+        height: 38px;
+        font-size: 1.4rem;
+      }
+
+      .welcome-banner {
+        flex-direction: column;
+        gap: 10px;
+        padding: 15px;
+      }
+
+      .welcome-banner .text {
+        font-size: 1.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="owner-info">
+      <img src="owner.jpg" alt="Owner Photo">
+      <div class="name">
+        SITI HAJAR NAJWA<br />
+        BINTI MOHD ZAINI
+      </div>
+    </div>
+  </header>
+
+  <div class="main-content">
+    <img class="logo" src="logo.png" alt="NAJ Library Logo" />
+    <h1>NAJ LIBRARY</h1>
+  </div>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="sport-database.html">Sport Database</a>
+    <a href="training-resources.html">Training Resources</a>
+    <a href="events-news.html">Events & News</a>
+    <a href="about-me.html">About Me</a>
+    <a href="contact.html">Contact</a>
+    <a href="sitemap.html">Sitemap</a>
+  </nav>
+
+  <div class="welcome-banner">
+    <i class="fas fa-book-open"></i>
+    <div class="text">Welcome to NAJ LIBRARY</div>
+  </div>
+
+  <div class="cards-container">
+    <section class="card">
+      <h2><span class="icon-circle"><i class="fas fa-bullseye"></i></span>Objective</h2>
+      <p>Create a comprehensive and user-friendly sports library website that provides resources for athletes, coaches, sports researchers, and fans.</p>
+    </section>
+
+    <section class="card">
+      <h2><span class="icon-circle"><i class="fas fa-trophy"></i></span>Goals</h2>
+      <ul>
+        <li>Provide access to sports resources (books, journals, databases, articles).</li>
+        <li>Enable athlete performance tracking and data-driven insights.</li>
+        <li>Integrate sports news and event schedules.</li>
+        <li>Facilitate research on sports science, coaching, fitness, and more.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2><span class="icon-circle"><i class="fas fa-users"></i></span>Target Audience</h2>
+      <ul>
+        <li>Athletes (high school, college, and professional).</li>
+        <li>Coaches and sports trainers.</li>
+        <li>Sports researchers and academics.</li>
+        <li>Fans and enthusiasts of specific sports.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2><span class="icon-circle"><i class="fas fa-tools"></i></span>Technology Stack</h2>
+      <p>Decide the tools, platforms, and technologies to use (WordPress, Drupal, or custom-built platforms).</p>
+    </section>
+
+    <section class="card">
+      <h2><span class="icon-circle"><i class="fas fa-lightbulb"></i></span>Strategy</h2>
+      <ul>
+        <li>Sports-related research articles.</li>
+        <li>Athlete profiles with performance data.</li>
+        <li>Training resources and guides.</li>
+        <li>News and event updates in the sports world.</li>
+      </ul>
+    </section>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 NAJ Library. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

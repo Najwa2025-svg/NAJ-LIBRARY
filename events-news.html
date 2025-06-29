@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Events & News - NAJ Library</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <style>
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      background: linear-gradient(to right, #ff5f6d, #ffc371);
+      color: #333;
+      padding: 0;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      padding: 15px 20px;
+      border-bottom: 3px solid #e74c3c;
+      gap: 15px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .owner-info img {
+      height: 80px;
+      border-radius: 12px;
+      border: 3px solid #e74c3c;
+      flex-shrink: 0;
+    }
+
+    .owner-info .name {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 1rem;
+      color: #e74c3c;
+      line-height: 1.2;
+    }
+
+    .main-content {
+      text-align: center;
+      max-width: 1200px;
+      margin: 30px auto;
+    }
+
+    .main-content .logo {
+      width: 150px;
+      margin-bottom: 15px;
+    }
+
+    .main-content h1 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 2.5rem;
+      color: #e74c3c;
+      letter-spacing: 2px;
+    }
+
+    nav {
+      width: 100%;
+      background-color: #e74c3c;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 16px;
+      padding: 14px 10px;
+      box-shadow: 0 6px 15px rgba(231, 76, 60, 0.45);
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 700;
+      font-family: 'Montserrat', sans-serif;
+      padding: 12px 22px;
+      border-radius: 8px;
+      transition: background-color 0.3s ease;
+    }
+
+    nav a:hover {
+      background-color: #c0392b;
+    }
+
+    .container {
+      max-width: 960px;
+      margin: 0 auto 40px;
+      padding: 30px;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    }
+
+    h2 {
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    .event, .news {
+      border-left: 5px solid #e74c3c;
+      padding: 15px 20px;
+      margin-bottom: 25px;
+      border-radius: 8px;
+      background-color: #fafafa;
+      box-shadow: 0 4px 8px rgba(231, 76, 60, 0.15);
+      position: relative;
+    }
+
+    .event .icon, .news .icon {
+      font-size: 40px;
+      color: #e74c3c;
+      position: absolute;
+      top: 15px;
+      right: 20px;
+      opacity: 0.15;
+    }
+
+    .event h2, .news h2 {
+      font-size: 22px;
+      color: #b31217;
+      margin-top: 0;
+      margin-bottom: 10px;
+    }
+
+    .date {
+      font-weight: bold;
+      color: #e74c3c;
+      margin-bottom: 10px;
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    a {
+      color: #e74c3c;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .timeline {
+      position: relative;
+      margin: 40px 0;
+      padding-left: 40px;
+    }
+
+    .timeline::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 20px;
+      width: 4px;
+      height: 100%;
+      background: #e74c3c;
+      border-radius: 2px;
+    }
+
+    .timeline-item {
+      position: relative;
+      margin-bottom: 30px;
+      padding-left: 30px;
+    }
+
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: 11px;
+      top: 5px;
+      width: 18px;
+      height: 18px;
+      background: #fff;
+      border: 4px solid #e74c3c;
+      border-radius: 50%;
+      box-sizing: border-box;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 10px 18px;
+      background-color: #e74c3c;
+      color: #fff;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    .back-link:hover {
+      background-color: #c0392b;
+    }
+
+    footer {
+      background-color: #e74c3c;
+      color: white;
+      text-align: center;
+      padding: 15px 0;
+      font-family: 'Roboto', sans-serif;
+      font-size: 14px;
+      margin-top: 40px;
+    }
+
+    @media screen and (max-width: 600px) {
+      nav a {
+        padding: 10px 14px;
+        font-size: 0.95rem;
+      }
+
+      .main-content h1 {
+        font-size: 2.2rem;
+      }
+
+      header {
+        padding: 12px 20px;
+        gap: 12px;
+      }
+
+      .owner-info img {
+        height: 70px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="owner-info">
+      <img src="owner.jpg" alt="Owner Photo" />
+      <div class="name">
+        SITI HAJAR NAJWA<br />
+        BINTI MOHD ZAINI
+      </div>
+    </div>
+  </header>
+
+  <div class="main-content">
+    <img class="logo" src="logo.png" alt="NAJ Library Logo" />
+    <h1>EVENTS & NEWS</h1>
+  </div>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="sport-database.html">Sport Database</a>
+    <a href="training-resources.html">Training Resources</a>
+    <a href="events-news.html">Events & News</a>
+    <a href="about-me.html">About Me</a>
+    <a href="contact.html">Contact</a>
+    <a href="sitemap.html">Sitemap</a>
+  </nav>
+
+  <div class="container">
+    <section class="timeline">
+      <article class="timeline-item event">
+        <i class="fa-solid fa-calendar-check icon"></i>
+        <div class="date">June 20, 2025</div>
+        <h2>Summer Sports Festival 2025</h2>
+        <p>Join us for a week-long festival featuring multi-sport competitions, workshops, and fun activities for all ages.</p>
+        <a href="summer-festival-2025.html">Learn more &rarr;</a>
+      </article>
+
+      <article class="timeline-item event">
+        <i class="fa-solid fa-basketball icon"></i>
+        <div class="date">July 15, 2025</div>
+        <h2>Basketball Skills Camp</h2>
+        <p>Sharpen your shooting, dribbling, and defensive skills with expert coaches in a 3-day intensive camp.</p>
+        <a href="basketball-camp.html">Register now &rarr;</a>
+      </article>
+
+      <article class="timeline-item news">
+        <i class="fa-solid fa-trophy icon"></i>
+        <div class="date">May 30, 2025</div>
+        <h2>Local Soccer Team Wins Championship</h2>
+        <p>Congratulations to the Tigers for their stunning victory in the regional championship this year.</p>
+        <a href="soccer-championship.html">More details &rarr;</a>
+      </article>
+    </section>
+
+    <a class="back-link" href="index.html">← Back to Home</a>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 NAJ Library. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

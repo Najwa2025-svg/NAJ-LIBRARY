@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Training Resources - NAJ Library</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      background: linear-gradient(to right, #ff5f6d, #ffc371);
+      color: #333;
+      padding: 0;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      padding: 15px 20px;
+      border-bottom: 3px solid #e74c3c;
+      gap: 15px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .owner-info img {
+      height: 80px;
+      border-radius: 12px;
+      border: 3px solid #e74c3c;
+      flex-shrink: 0;
+    }
+
+    .owner-info .name {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 1rem;
+      color: #e74c3c;
+      line-height: 1.2;
+    }
+
+    .main-content {
+      text-align: center;
+      max-width: 1200px;
+      margin: 30px auto;
+    }
+
+    .main-content .logo {
+      width: 150px;
+      margin-bottom: 15px;
+    }
+
+    .main-content h1 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 2.5rem;
+      color: #e74c3c;
+      letter-spacing: 2px;
+    }
+
+    nav {
+      width: 100%;
+      background-color: #e74c3c;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 16px;
+      padding: 14px 10px;
+      box-shadow: 0 6px 15px rgba(231, 76, 60, 0.45);
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 700;
+      font-family: 'Montserrat', sans-serif;
+      padding: 12px 22px;
+      border-radius: 8px;
+      transition: background-color 0.3s ease;
+    }
+
+    nav a:hover {
+      background-color: #c0392b;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 40px auto;
+      padding: 20px;
+    }
+
+    .resources-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+    }
+
+    .resource-card {
+      background: white;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+      transition: transform 0.2s;
+    }
+
+    .resource-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .resource-card h2 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 20px;
+      color: #e74c3c;
+      margin: 10px 0;
+    }
+
+    .resource-card p {
+      font-size: 15px;
+      line-height: 1.5;
+      color: #555;
+    }
+
+    .resource-card a {
+      display: inline-block;
+      margin-top: 12px;
+      text-decoration: none;
+      color: #e74c3c;
+      font-weight: bold;
+    }
+
+    .icon {
+      font-size: 28px;
+      color: #e74c3c;
+    }
+
+    footer {
+      background-color: #e74c3c;
+      color: white;
+      text-align: center;
+      padding: 15px 0;
+      font-family: 'Roboto', sans-serif;
+      font-size: 14px;
+      margin-top: 40px;
+    }
+
+    @media screen and (max-width: 600px) {
+      nav a {
+        padding: 10px 14px;
+        font-size: 0.95rem;
+      }
+
+      .main-content h1 {
+        font-size: 2.2rem;
+      }
+
+      header {
+        padding: 12px 20px;
+        gap: 12px;
+      }
+
+      .owner-info img {
+        height: 70px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="owner-info">
+      <img src="owner.jpg" alt="Owner Photo" />
+      <div class="name">
+        SITI HAJAR NAJWA<br />
+        BINTI MOHD ZAINI
+      </div>
+    </div>
+  </header>
+
+  <div class="main-content">
+    <img class="logo" src="logo.png" alt="NAJ Library Logo" />
+    <h1><i class="fas fa-dumbbell"></i> TRAINING RESOURCES</h1>
+  </div>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="sport-database.html">Sport Database</a>
+    <a href="training-resources.html">Training Resources</a>
+    <a href="events-news.html">Events & News</a>
+    <a href="about-me.html">About Me</a>
+    <a href="contact.html">Contact</a>
+    <a href="sitemap.html">Sitemap</a>
+  </nav>
+
+  <div class="container">
+    <div class="resources-grid">
+      <div class="resource-card">
+        <div class="icon"><i class="fas fa-dumbbell"></i></div>
+        <h2>Strength & Conditioning</h2>
+        <p>Improve your strength, endurance, and injury prevention through structured routines.</p>
+        <a href="strength-conditioning.html">Go to Page →</a>
+      </div>
+
+      <div class="resource-card">
+        <div class="icon"><i class="fas fa-shoe-prints"></i></div>
+        <h2>Speed & Agility Drills</h2>
+        <p>Learn drills used by athletes to enhance footwork and explosive speed.</p>
+        <a href="speed-agility.html">Go to Page →</a>
+      </div>
+
+      <div class="resource-card">
+        <div class="icon"><i class="fas fa-running"></i></div>
+        <h2>Sport-Specific Training</h2>
+        <p>Custom exercises tailored for football, badminton, swimming, and more.</p>
+        <a href="sport-specific.html">Go to Page →</a>
+      </div>
+
+      <div class="resource-card">
+        <div class="icon"><i class="fas fa-apple-alt"></i></div>
+        <h2>Nutrition & Recovery</h2>
+        <p>Guidelines on athlete nutrition, hydration, and post-training recovery strategies.</p>
+        <a href="nutrition-recovery.html">Go to Page →</a>
+      </div>
+
+      <div class="resource-card">
+        <div class="icon"><i class="fas fa-brain"></i></div>
+        <h2>Mental Training</h2>
+        <p>Enhance focus, motivation, and mental resilience through proven techniques.</p>
+        <a href="mental-training.html">Go to Page →</a>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 NAJ Library. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

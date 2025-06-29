@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Mental Training - NAJ Library</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      background: linear-gradient(135deg, #f44336, #ff7043); /* Red-orange gradient background */
+      color: #fff;
+      background-attachment: fixed;
+      padding: 40px 20px;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 30px;
+      background: rgba(255, 255, 255, 0.95);
+      color: #333;
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    }
+
+    h1, h2 {
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    h1 {
+      font-size: 36px;
+      color: #b31217;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      margin-top: 30px;
+      color: #e74c3c;
+      font-size: 24px;
+    }
+
+    p, li {
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    .tips li {
+      margin-bottom: 10px;
+      list-style: none;
+    }
+
+    .tips li i {
+      font-size: 20px;
+      margin-right: 10px;
+      color: #e74c3c;
+    }
+
+    .pulse {
+      animation: pulse 1.5s infinite;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.2); }
+      100% { transform: scale(1); }
+    }
+
+    iframe {
+      width: 100%;
+      height: 315px;
+      margin-top: 20px;
+      border-radius: 10px;
+      border: none;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    .infographic {
+      width: 100%;
+      margin-top: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    .resources a {
+      display: block;
+      margin: 8px 0;
+      color: #e74c3c;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .resources a:hover {
+      text-decoration: underline;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-top: 40px;
+      padding: 10px 20px;
+      background-color: #e74c3c;
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 8px;
+      transition: background 0.3s;
+    }
+
+    .back-link:hover {
+      background-color: #c0392b;
+    }
+    footer {
+  background-color: #e74c3c;
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  margin-top: 40px;
+}
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Mental Training</h1>
+    <p>Enhance focus, motivation, and mental resilience through proven techniques. Mental training prepares athletes to perform under pressure, stay disciplined, and remain emotionally balanced.</p>
+
+    <h2><i class="fas fa-bolt pulse"></i> Benefits of Mental Training</h2>
+    <ul class="tips">
+      <li><i class="fas fa-fire pulse"></i> Boost motivation and competitive spirit</li>
+      <li><i class="fas fa-brain"></i> Strengthen focus and mental clarity</li>
+      <li><i class="fas fa-heartbeat"></i> Manage performance anxiety and nerves</li>
+      <li><i class="fas fa-eye"></i> Enhance visualisation and confidence</li>
+      <li><i class="fas fa-medal"></i> Maintain peak mindset on race/game day</li>
+    </ul>
+
+    <h2><i class="fas fa-video"></i> Watch These Videos</h2>
+
+    <iframe src="https://www.youtube.com/embed/b_vqkXQb5yE" title="Mind Training for Athletes" allowfullscreen></iframe>
+    <iframe src="https://www.youtube.com/embed/NHMJA5bzbYs" title="Focus Techniques" allowfullscreen></iframe>
+    <iframe src="https://www.youtube.com/embed/gBkcORCGzi4" title="Resilience & Motivation" allowfullscreen></iframe>
+
+    <h2><i class="fas fa-book-open"></i> Recommended Reading</h2>
+    <div class="resources">
+      <a href="https://www.mayoclinichealthsystem.org/hometown-health/speaking-of-health/train-your-mind-for-race-day" target="_blank">Mayo Clinic: Train Your Mind for Race Day</a>
+      <a href="https://rewirefitness.app/training-tips/mental-training-for-athletes-what-is-it-and-how-to-start/" target="_blank">Rewire Fitness: How to Start Mental Training</a>
+      <a href="https://positivepsychology.com/mental-toughness-for-young-athletes/" target="_blank">Positive Psychology: Mental Toughness for Young Athletes</a>
+      <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9859147/" target="_blank">NIH: Mental Health and Training in Athletes</a>
+      <a href="https://www.trainingpeaks.com/blog/mental-strategies-from-the-worlds-best-athletes/" target="_blank">TrainingPeaks: Elite Athlete Mental Strategies</a>
+    </div>
+
+    <h2><i class="fas fa-image"></i> Infographic</h2>
+    <img src="assets/images/infografik.png" alt="Infographic" class="infographic" />
+
+    <a class="back-link" href="training-resources.html">← Back to Training Resources</a>
+  </div>
+
+  <footer>
+  <p>&copy; 2025 NAJ Library. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
